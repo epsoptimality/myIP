@@ -1,0 +1,6 @@
+#!/usr/bin/fish
+
+curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' > my_address
+git add my_address
+git commit -m "New Address"
+git push
